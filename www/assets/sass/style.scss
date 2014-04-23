@@ -3,6 +3,10 @@
 
 $background-color: #44333d;
 $text-color: #f3ecd3;
+$base-size: 16px;
+
+$font-heading: TheSansBold, san-serif;
+$font-body: Helvetica, Arial, freesans, sans-serif;
 
 /* Font Face */
 @font-face{
@@ -11,72 +15,139 @@ $text-color: #f3ecd3;
          url('http://www.vam.ac.uk/__data/assets/file/0003/231294/TheSans_LP_700_Bold.woff') format('woff');
 }
 
-.vam_global_banner{
-    
-    background-color: $background-color;
-    color: $text-color;
-    font: 12px/1.35 helvetica, arial, freesans, sans-serif;
-    height: 30px;
-    
-    a{
+@function calc-em($target-px, $context) {
+    @return ($target-px / $context) * 1em;
+}
+
+@mixin box-sizing($type:border-box){
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+}
+
+body{
+    .vam_global_banner{
+        
+        background-color: $background-color;
         color: $text-color;
-    }
-    
-    h1 a{
-        background: url(http://www.vam.ac.uk/__data/assets/image/0008/172547/logo_mob.png?v=0.5.1) no-repeat 4px center;
-        background-size: contain;
-        float: left;
-        height: 22px;
-        margin: 4px 0;
-        text-indent: -9999px;
-        width: 58px;
-    }
-    
-    .vam_global_navigation{
+        font: 100% $font-body;
+        height: calc-em(30px, $base-size);
+        margin-bottom: calc-em(10px, $base-size);
         
-        margin-right: 5px;
-        text-align: right;
-        
-        ul, form{
-            display: inline;
+        a{
+            color: $text-color;
             
-        }
-        
-        .vam_global_site_navigation,
-        form{
             &:hover{
                 color: darken($text-color, 20);
             }
-            
-            &:before{
-                @extend .fa;
-                font-size: 20px;
-                margin: 5px 2.5px;
-            }
         }
-    
-        .vam_global_site_navigation{
+        
+        h1 a{
+            background: url(http://www.vam.ac.uk/__data/assets/image/0008/172547/logo_mob.png?v=0.5.1) no-repeat 4px center;
+            background-size: contain;
+            float: left;
+            height: calc-em(22px, $base-size);
+            margin: calc-em(4px, $base-size) 0;
+            text-indent: -9999px;
+            width: calc-em(58px, $base-size);
+        }
+        
+        .vam_global_navigation,
+        .vam_global_site_search{
+            height: calc-em(22px, $base-size);
+            margin-right: calc-em(5px, $base-size);
+            padding: calc-em(4px, $base-size) 0;
+            text-align: right;
+            float: right;
             
-            &:before{
-                content: '\f0c9';
+            input[type=checkbox] {
+               position: absolute;
+               top: -9999px;
+               left: -9999px;
             }
             
-            li{
+            label {
+                @extend .fa;
+                font-family: FontAwesome, TheSansBold, san-serif;
+                cursor: pointer;
+                display: block;
+                font-size: calc-em(20px, $base-size);
+                margin-right: calc-em(4px, $base-size);
+                text-indent: -9999px;
+                
+                &:hover{
+                    color: darken($text-color, 20);
+                }
+            }
+    
+            #vam_global_site_navigation_toggle:checked ~ ul {
+               display: block;
+            }
+            
+            #vam_global_site_search_toggle:checked ~ form {
+               display: block;
+            }
+            
+            form,
+            ul {
+                background-color: lighten($background-color, 10);
                 display: none;
+                left: 0;
+                list-style-type: none;
+                margin: calc-em(6px, $base-size) 0;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                
+                li{
+                    @include box-sizing();
+                    border-bottom: 1px solid white;
+                    display: inline;
+                    float: left;
+                    text-align: left;
+                    width: 100%;
+                    white-space: nowrap;
+                    
+                    @media screen and (min-width: 215px){
+                        width: 50%;
+                        
+                        &:nth-child(2n+1) {
+                            border-right: 1px solid #fff;
+                        }
+                    }
+                    
+                    a{
+                        background: url(http://www.vam.ac.uk/__data/assets/image/0007/172465/arrow-r_dk.gif?v=0.6.1) lighten($background-color, 10) 99% 50% no-repeat;
+                        display: block;
+                        text-decoration: none;
+                        padding: calc-em(8px, $base-size);
+                    }
+                }
+                
+                
             }
         }
         
-        form{
-            &:before{
-                content: "\f002";
+        .vam_global_navigation label{
+        	i{
+                font-style: normal;
             }
             
-            
-            input{
-                display: none;
+            @media screen and (max-width: 215px){
+                i{display: none;}
             }
+        
+        	&:before{
+	            content: '\f0c9';
+	        }
         }
-    
+        
+        .vam_global_site_search label{
+        	i{display: none;}
+        	
+        	&:before{
+            	content: '\f002';
+			}
+        }
     }
-    
 }

@@ -120,8 +120,8 @@ textarea {
 }
 
 /* line 4, ../lib/FontAwesome/scss/_core.scss */
-.fa, .vam_global_banner .vam_global_navigation .vam_global_site_navigation:before,
-.vam_global_banner .vam_global_navigation form:before {
+.fa, body .vam_global_banner .vam_global_navigation label,
+body .vam_global_banner .vam_global_site_search label {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -207,13 +207,13 @@ textarea {
 }
 
 /* line 14, ../lib/FontAwesome/scss/_bordered-pulled.scss */
-.fa.pull-left, .vam_global_banner .vam_global_navigation .pull-left.vam_global_site_navigation:before,
-.vam_global_banner .vam_global_navigation form.pull-left:before {
+.fa.pull-left, body .vam_global_banner .vam_global_navigation label.pull-left,
+body .vam_global_banner .vam_global_site_search label.pull-left {
   margin-right: .3em;
 }
 /* line 15, ../lib/FontAwesome/scss/_bordered-pulled.scss */
-.fa.pull-right, .vam_global_banner .vam_global_navigation .pull-right.vam_global_site_navigation:before,
-.vam_global_banner .vam_global_navigation form.pull-right:before {
+.fa.pull-right, body .vam_global_banner .vam_global_navigation label.pull-right,
+body .vam_global_banner .vam_global_site_search label.pull-right {
   margin-left: .3em;
 }
 
@@ -2261,60 +2261,147 @@ textarea {
   src: url("http://www.vam.ac.uk/__data/assets/file/0020/231293/TheSans_LP_700_Bold.eot") format("eot"), url("http://www.vam.ac.uk/__data/assets/file/0003/231294/TheSans_LP_700_Bold.woff") format("woff");
 }
 
-/* line 14, ../sass/style.scss */
-.vam_global_banner {
+/* line 29, ../sass/style.scss */
+body .vam_global_banner {
   background-color: #44333d;
   color: #f3ecd3;
-  font: 12px/1.35 helvetica, arial, freesans, sans-serif;
-  height: 30px;
+  font: 100% Helvetica, Arial, freesans, sans-serif;
+  height: 1.875em;
+  margin-bottom: 0.625em;
 }
-/* line 21, ../sass/style.scss */
-.vam_global_banner a {
+/* line 37, ../sass/style.scss */
+body .vam_global_banner a {
   color: #f3ecd3;
 }
-/* line 25, ../sass/style.scss */
-.vam_global_banner h1 a {
+/* line 40, ../sass/style.scss */
+body .vam_global_banner a:hover {
+  color: #ddc983;
+}
+/* line 45, ../sass/style.scss */
+body .vam_global_banner h1 a {
   background: url(http://www.vam.ac.uk/__data/assets/image/0008/172547/logo_mob.png?v=0.5.1) no-repeat 4px center;
   background-size: contain;
   float: left;
-  height: 22px;
-  margin: 4px 0;
+  height: 1.375em;
+  margin: 0.25em 0;
   text-indent: -9999px;
-  width: 58px;
+  width: 3.625em;
 }
-/* line 35, ../sass/style.scss */
-.vam_global_banner .vam_global_navigation {
-  margin-right: 5px;
+/* line 56, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation,
+body .vam_global_banner .vam_global_site_search {
+  height: 1.375em;
+  margin-right: 0.3125em;
+  padding: 0.25em 0;
   text-align: right;
+  float: right;
 }
-/* line 40, ../sass/style.scss */
-.vam_global_banner .vam_global_navigation ul, .vam_global_banner .vam_global_navigation form {
-  display: inline;
+/* line 63, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation input[type=checkbox],
+body .vam_global_banner .vam_global_site_search input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
-/* line 47, ../sass/style.scss */
-.vam_global_banner .vam_global_navigation .vam_global_site_navigation:hover,
-.vam_global_banner .vam_global_navigation form:hover {
+/* line 69, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation label,
+body .vam_global_banner .vam_global_site_search label {
+  font-family: FontAwesome, TheSansBold, san-serif;
+  cursor: pointer;
+  display: block;
+  font-size: 1.25em;
+  margin-right: 0.25em;
+  text-indent: -9999px;
+}
+/* line 78, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation label:hover,
+body .vam_global_banner .vam_global_site_search label:hover {
   color: #ddc983;
 }
-/* line 51, ../sass/style.scss */
-.vam_global_banner .vam_global_navigation .vam_global_site_navigation:before,
-.vam_global_banner .vam_global_navigation form:before {
-  font-size: 20px;
-  margin: 5px 2.5px;
+/* line 83, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation #vam_global_site_navigation_toggle:checked ~ ul,
+body .vam_global_banner .vam_global_site_search #vam_global_site_navigation_toggle:checked ~ ul {
+  display: block;
 }
-/* line 60, ../sass/style.scss */
-.vam_global_banner .vam_global_navigation .vam_global_site_navigation:before {
+/* line 87, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation #vam_global_site_search_toggle:checked ~ form,
+body .vam_global_banner .vam_global_site_search #vam_global_site_search_toggle:checked ~ form {
+  display: block;
+}
+/* line 92, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation form,
+body .vam_global_banner .vam_global_navigation ul,
+body .vam_global_banner .vam_global_site_search form,
+body .vam_global_banner .vam_global_site_search ul {
+  background-color: #614957;
+  display: none;
+  left: 0;
+  list-style-type: none;
+  margin: 0.375em 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+/* line 102, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation form li,
+body .vam_global_banner .vam_global_navigation ul li,
+body .vam_global_banner .vam_global_site_search form li,
+body .vam_global_banner .vam_global_site_search ul li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  display: inline;
+  float: left;
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+}
+@media screen and (min-width: 215px) {
+  /* line 102, ../sass/style.scss */
+  body .vam_global_banner .vam_global_navigation form li,
+  body .vam_global_banner .vam_global_navigation ul li,
+  body .vam_global_banner .vam_global_site_search form li,
+  body .vam_global_banner .vam_global_site_search ul li {
+    width: 50%;
+  }
+  /* line 114, ../sass/style.scss */
+  body .vam_global_banner .vam_global_navigation form li:nth-child(2n+1),
+  body .vam_global_banner .vam_global_navigation ul li:nth-child(2n+1),
+  body .vam_global_banner .vam_global_site_search form li:nth-child(2n+1),
+  body .vam_global_banner .vam_global_site_search ul li:nth-child(2n+1) {
+    border-right: 1px solid #fff;
+  }
+}
+/* line 119, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation form li a,
+body .vam_global_banner .vam_global_navigation ul li a,
+body .vam_global_banner .vam_global_site_search form li a,
+body .vam_global_banner .vam_global_site_search ul li a {
+  background: url(http://www.vam.ac.uk/__data/assets/image/0007/172465/arrow-r_dk.gif?v=0.6.1) #614957 99% 50% no-repeat;
+  display: block;
+  text-decoration: none;
+  padding: 0.5em;
+}
+/* line 132, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation label i {
+  font-style: normal;
+}
+@media screen and (max-width: 215px) {
+  /* line 137, ../sass/style.scss */
+  body .vam_global_banner .vam_global_navigation label i {
+    display: none;
+  }
+}
+/* line 140, ../sass/style.scss */
+body .vam_global_banner .vam_global_navigation label:before {
   content: '\f0c9';
 }
-/* line 64, ../sass/style.scss */
-.vam_global_banner .vam_global_navigation .vam_global_site_navigation li {
+/* line 146, ../sass/style.scss */
+body .vam_global_banner .vam_global_site_search label i {
   display: none;
 }
-/* line 70, ../sass/style.scss */
-.vam_global_banner .vam_global_navigation form:before {
-  content: "\f002";
-}
-/* line 75, ../sass/style.scss */
-.vam_global_banner .vam_global_navigation form input {
-  display: none;
+/* line 148, ../sass/style.scss */
+body .vam_global_banner .vam_global_site_search label:before {
+  content: '\f002';
 }
