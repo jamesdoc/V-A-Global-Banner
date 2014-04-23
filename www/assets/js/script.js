@@ -1,1 +1,1 @@
-document.getElementsByTagName('body')[0].className+='js'
+document.getElementsByClassName('vam_global_banner')[0].className+=' js'

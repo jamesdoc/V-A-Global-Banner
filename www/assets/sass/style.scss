@@ -5,6 +5,8 @@ $background-color: #44333d;
 $text-color: #f3ecd3;
 $base-size: 16px;
 
+$max-width: 960px;
+
 $font-heading: TheSansBold, san-serif;
 $font-body: Helvetica, Arial, freesans, sans-serif;
 
@@ -41,7 +43,7 @@ $font-body: Helvetica, Arial, freesans, sans-serif;
 body{
 
 	.container{
-		max-width: 960px;
+		max-width: $max-width;
 		margin: 0 auto;
 	}
 
@@ -108,18 +110,20 @@ body{
 	            }
 	            
 	            #vam_global_site_search_toggle:checked ~ form {
-	               display: block;
+	               display: table;
 	            }
 	            
 	            form,
 	            ul {
 	                background-color: lighten($background-color, 10);
 	                display: none;
+	                font-family: $font-heading;
 	                left: 0;
 	                list-style-type: none;
-	                margin: calc-em(6px, $base-size) 0;
+	                margin: calc-em(6px, $base-size) auto;
+	                max-width: $max-width;
 	                position: absolute;
-	                text-align: center;
+	                right: 0;
 	                width: 100%;
 	                
 	                li{
@@ -140,14 +144,61 @@ body{
 	                    }
 	                    
 	                    a{
-	                        background: url(http://www.vam.ac.uk/__data/assets/image/0007/172465/arrow-r_dk.gif?v=0.6.1) lighten($background-color, 10) 99% 50% no-repeat;
+	                        background: lighten($background-color, 10) url(http://www.vam.ac.uk/__data/assets/image/0007/172465/arrow-r_dk.gif?v=0.6.1) 99% 50% no-repeat;
 	                        display: block;
 	                        text-decoration: none;
 	                        padding: calc-em(8px, $base-size);
 	                    }
 	                }
-	                
-	                
+	            }
+	            
+	            form{
+	            	height: calc-em(32px, $base-size);
+	            	overflow: hidden;
+	            
+	            	input, button{
+		            	border: 1px solid white;
+						margin: 0;
+						padding: 0;
+	            	}
+	            
+		            input[type=text]{
+		            	display: table-cell;
+		            	font-family: $font-heading;
+		            	float: left;
+		            	height: calc-em(22px, $base-size);
+		            	margin: calc-em(4px, $base-size);
+		            	padding: 0 1%;
+						position: relative;
+						width: 98%;
+						
+						&:focus {
+							outline: none;
+						}
+		            }
+		            
+		            span {
+		            	display: table-cell;
+		            	font-size: 0;
+		            	position: relative;
+						vertical-align: middle;
+						width: 1%;
+						white-space: nowrap;
+						
+			            button{
+							border: 1px solid transparent;
+							cursor: pointer;
+							height: 24px;
+							margin-right: calc-em(4px, $base-size);
+							padding: calc-em(4px, $base-size) calc-em(10px, $base-size);
+							-webkit-user-select: none;
+							-moz-user-select: none;
+							-ms-user-select: none;
+							user-select: none;
+							vertical-align: middle;
+							white-space: nowrap;
+			            }
+		            }
 	            }
 	        }
 	        
