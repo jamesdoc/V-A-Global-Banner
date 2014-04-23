@@ -39,6 +39,12 @@ $font-body: Helvetica, Arial, freesans, sans-serif;
 }
 
 body{
+
+	.container{
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
     .vam_global_banner{
         
         background-color: $background-color;

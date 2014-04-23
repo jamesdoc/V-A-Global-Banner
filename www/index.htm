@@ -6,51 +6,61 @@
 </head>
 
 <body>
+
 	<div class="vam_global_banner">
-		<h1>
-			<a href="http://www.vam.ac.uk">Victoria and Albert Museum</a>
-		</h1>
-		
-		<div class="vam_global_buttons">
-			<div class="vam_global_navigation">
-	            
-	            <label for="vam_global_site_navigation_toggle">
-	                <i>All sites</i>
-	            </label>
-	            
-	            <input type="checkbox" id="vam_global_site_navigation_toggle" />
-	            
-				<ul>
-					<li><a href="http://www.vam.ac.uk">Main Site</a></li>
-					<li><a href="#">Explorer Map</a></li>
-					<li><a href="#">Exhibitions</a></li>
-					<li><a href="#">What's On?</a></li>
-					<li><a href="#">V&amp;A Channel</a></li>
-					<li><a href="#">Collections</a></li>
-					<li><a href="#">V&amp;A Shop</a></li>
-					<li><a href="#">More...</a></li>
-				</ul>
+	
+		<div class="container">
+	
+			<h1>
+				<a href="http://www.vam.ac.uk">Victoria and Albert Museum</a>
+			</h1>
+			
+			<div class="vam_global_buttons">
+				<div class="vam_global_navigation">
+		            
+		            <label for="vam_global_site_navigation_toggle">
+		                <i>All sites</i>
+		            </label>
+		            
+		            <input type="checkbox" id="vam_global_site_navigation_toggle" />
+		            
+					<ul>
+						<li><a href="http://www.vam.ac.uk">Main Site</a></li>
+						<li><a href="#">Explorer Map</a></li>
+						<li><a href="#">Exhibitions</a></li>
+						<li><a href="#">What's On?</a></li>
+						<li><a href="#">V&amp;A Channel</a></li>
+						<li><a href="#">Collections</a></li>
+						<li><a href="#">V&amp;A Shop</a></li>
+						<li><a href="#">More...</a></li>
+					</ul>
+				</div>
+				
+				<div class="vam_global_site_search">
+				
+				    <label for="vam_global_site_search_toggle">
+		                <i>Search</i>
+		            </label>
+		            
+		            <input type="checkbox" id="vam_global_site_search_toggle" />
+				    
+		    		<form action="http://www.vam.ac.uk/contentapi/search" method="get">
+		    			<input type="text" name="q" id="query" autocomplete="off" />
+		    			<input type="submit" name="search-submit" value="Go" />
+		    		</form>
+				</div>
 			</div>
 			
-			<div class="vam_global_site_search">
-			
-			    <label for="vam_global_site_search_toggle">
-	                <i>Search</i>
-	            </label>
-	            
-	            <input type="checkbox" id="vam_global_site_search_toggle" />
-			    
-	    		<form action="http://www.vam.ac.uk/contentapi/search" method="get">
-	    			<input type="text" name="q" id="query" autocomplete="off" />
-	    			<input type="submit" name="search-submit" value="Go" />
-	    		</form>
-			</div>
 		</div>
+		
 	</div>
 	
+	<div class="container">
 	
-	<iframe src="http://m.vam.ac.uk/collections/search/?offset=0&limit=10&q=Neptune&commit=Search&quality=2&objectnamesearch=&placesearch=&after=&after-adbc=AD&before=&before-adbc=AD&namesearch=&materialsearch=&mnsearch=&locationsearch=" style="width: 100%; border: 0; height: 840px;">
-	</iframe>
+		<iframe src="http://m.vam.ac.uk/collections/search/?offset=0&limit=10&q=Neptune&commit=Search&quality=2&objectnamesearch=&placesearch=&after=&after-adbc=AD&before=&before-adbc=AD&namesearch=&materialsearch=&mnsearch=&locationsearch=" style="width: 100%; border: 0; height: 840px;">
+		</iframe>
+	
+	</div>
 	
     <script type="text/javascript" src="assets/js/script.js"></script>
     
