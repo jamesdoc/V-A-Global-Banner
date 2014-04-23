@@ -155,6 +155,11 @@ body{
 	            form{
 	            	height: calc-em(32px, $base-size);
 	            	overflow: hidden;
+	            	
+	            	@media screen and (min-width: 600px){
+	            		left: inherit;
+	            		width: 400px;
+	            	}
 	            
 	            	input, button{
 		            	border: 1px solid white;
@@ -216,13 +221,16 @@ body{
 		        }
 	        }
 	        
-	        .vam_global_site_search label{
-	        	i{display: none;}
-	        	
-	        	&:before{
-	            	content: '\f002';
-				}
-	        }
+	        .vam_global_site_search{
+	        	@media screen and (min-width: 600px){position: relative;}
+	        	label{
+		        	i{display: none;}
+		        	
+		        	&:before{
+		            	content: '\f002';
+					}
+		        }
+		    }
 	        
 		}
     }

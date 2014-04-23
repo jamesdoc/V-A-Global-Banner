@@ -2400,7 +2400,15 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form {
   height: 2em;
   overflow: hidden;
 }
-/* line 159, ../sass/style.scss */
+@media screen and (min-width: 600px) {
+  /* line 155, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation form,
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search form {
+    left: inherit;
+    width: 400px;
+  }
+}
+/* line 164, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form input, body .vam_global_banner .vam_global_buttons .vam_global_navigation form button,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form input,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form button {
@@ -2408,7 +2416,7 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form button 
   margin: 0;
   padding: 0;
 }
-/* line 165, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form input[type=text],
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form input[type=text] {
   display: table-cell;
@@ -2420,12 +2428,12 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form input[t
   position: relative;
   width: 98%;
 }
-/* line 175, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form input[type=text]:focus,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form input[type=text]:focus {
   outline: none;
 }
-/* line 180, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form span,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form span {
   display: table-cell;
@@ -2435,7 +2443,7 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form span {
   width: 1%;
   white-space: nowrap;
 }
-/* line 188, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form span button,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form span button {
   border: 1px solid transparent;
@@ -2450,25 +2458,31 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form span bu
   vertical-align: middle;
   white-space: nowrap;
 }
-/* line 206, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation label i {
   font-style: normal;
 }
 @media screen and (max-width: 215px) {
-  /* line 211, ../sass/style.scss */
+  /* line 216, ../sass/style.scss */
   body .vam_global_banner .vam_global_buttons .vam_global_navigation label i {
     display: none;
   }
 }
-/* line 214, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation label:before {
   content: '\f0c9';
 }
-/* line 220, ../sass/style.scss */
+@media screen and (min-width: 600px) {
+  /* line 224, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search {
+    position: relative;
+  }
+}
+/* line 227, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_site_search label i {
   display: none;
 }
-/* line 222, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_site_search label:before {
   content: '\f002';
 }
