@@ -1,0 +1,82 @@
+@import "restart.scss";
+@import "font_awesome.scss";
+
+$background-color: #44333d;
+$text-color: #f3ecd3;
+
+/* Font Face */
+@font-face{
+    font-family: "TheSansBold";
+    src: url('http://www.vam.ac.uk/__data/assets/file/0020/231293/TheSans_LP_700_Bold.eot') format('eot'),
+         url('http://www.vam.ac.uk/__data/assets/file/0003/231294/TheSans_LP_700_Bold.woff') format('woff');
+}
+
+.vam_global_banner{
+    
+    background-color: $background-color;
+    color: $text-color;
+    font: 12px/1.35 helvetica, arial, freesans, sans-serif;
+    height: 30px;
+    
+    a{
+        color: $text-color;
+    }
+    
+    h1 a{
+        background: url(http://www.vam.ac.uk/__data/assets/image/0008/172547/logo_mob.png?v=0.5.1) no-repeat 4px center;
+        background-size: contain;
+        float: left;
+        height: 22px;
+        margin: 4px 0;
+        text-indent: -9999px;
+        width: 58px;
+    }
+    
+    .vam_global_navigation{
+        
+        margin-right: 5px;
+        text-align: right;
+        
+        ul, form{
+            display: inline;
+            
+        }
+        
+        .vam_global_site_navigation,
+        form{
+            &:hover{
+                color: darken($text-color, 20);
+            }
+            
+            &:before{
+                @extend .fa;
+                font-size: 20px;
+                margin: 5px 2.5px;
+            }
+        }
+    
+        .vam_global_site_navigation{
+            
+            &:before{
+                content: '\f0c9';
+            }
+            
+            li{
+                display: none;
+            }
+        }
+        
+        form{
+            &:before{
+                content: "\f002";
+            }
+            
+            
+            input{
+                display: none;
+            }
+        }
+    
+    }
+    
+}

@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+/* line 20, ../sass/restart.scss */
+/* line 20, ../sass/restart.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, ../sass/restart.scss */
+/* line 27, ../sass/restart.scss */
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 28, ../sass/restart.scss */
+/* line 32, ../sass/restart.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+/* line 31, ../sass/restart.scss */
+/* line 37, ../sass/restart.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 35, ../sass/restart.scss */
+/* line 43, ../sass/restart.scss */
+strong, b, mark {
+  font-weight: bold;
+  font-style: inherit;
+}
+
+/* line 39, ../sass/restart.scss */
+/* line 49, ../sass/restart.scss */
+em, i, cite, q, address, dfn, var {
+  font-style: italic;
+  font-weight: inherit;
+}
+
+/* line 43, ../sass/restart.scss */
+/* line 55, ../sass/restart.scss */
+abbr[title], dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+
+/* line 47, ../sass/restart.scss */
+/* line 61, ../sass/restart.scss */
+ins {
+  border-bottom: 1px solid;
+}
+
+/* line 50, ../sass/restart.scss */
+/* line 66, ../sass/restart.scss */
+a, u, ins {
+  text-decoration: none;
+}
+
+/* line 53, ../sass/restart.scss */
+/* line 71, ../sass/restart.scss */
+del, s {
+  text-decoration: line-through;
+}
+
+/* line 56, ../sass/restart.scss */
+/* line 76, ../sass/restart.scss */
+pre, code, samp, kbd {
+  font-family: monospace;
+}
+
+/* line 59, ../sass/restart.scss */
+/* line 81, ../sass/restart.scss */
+small {
+  font-size: 0.75em;
+}
+
+/* line 62, ../sass/restart.scss */
+/* line 86, ../sass/restart.scss */
+img {
+  border: none;
+  font-style: italic;
+}
+
+/* line 68, ../sass/restart.scss */
+/* line 94, ../sass/restart.scss */
+input,
+select,
+textarea {
+  font: inherit;
+}
