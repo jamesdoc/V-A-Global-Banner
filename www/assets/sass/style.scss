@@ -1,10 +1,12 @@
 @import "restart.scss";
 @import "font_awesome.scss";
 
-$background-color: #44333d;
-$text-color: #f3ecd3;
-$base-size: 16px;
+$colour-vam-purple: #44333d;
+$colour-vam-cream: #f3ecd3;
+$colour-vam-blue: #bbe3fa;
+$colour-vam-grey: #555555;
 
+$base-size: 16px;
 $max-width: 960px;
 
 $font-heading: TheSansBold, san-serif;
@@ -49,17 +51,17 @@ body{
 
     .vam_global_banner{
         
-        background-color: $background-color;
-        color: $text-color;
+        background-color: $colour-vam-purple;
+        color: $colour-vam-cream;
         font: 100% $font-body;
         height: calc-em(30px, $base-size);
         margin-bottom: calc-em(10px, $base-size);
         
         a{
-            color: $text-color;
+            color: $colour-vam-cream;
             
             &:hover{
-                color: darken($text-color, 20);
+                color: darken($colour-vam-cream, 20);
             }
         }
         
@@ -101,7 +103,7 @@ body{
 	                text-indent: -9999px;
 	                
 	                &:hover{
-	                    color: darken($text-color, 20);
+	                    color: darken($colour-vam-cream, 20);
 	                }
 	            }
 	    
@@ -115,7 +117,7 @@ body{
 	            
 	            form,
 	            ul {
-	                background-color: lighten($background-color, 10);
+	                background-color: lighten($colour-vam-purple, 10);
 	                display: none;
 	                font-family: $font-heading;
 	                left: 0;
@@ -144,10 +146,16 @@ body{
 	                    }
 	                    
 	                    a{
-	                        background: lighten($background-color, 10) url(http://www.vam.ac.uk/__data/assets/image/0007/172465/arrow-r_dk.gif?v=0.6.1) 99% 50% no-repeat;
+	                        background: url(http://www.vam.ac.uk/__data/assets/image/0007/172465/arrow-r_dk.gif?v=0.6.1) 99% 50% no-repeat;
+	                        background-color: $colour-vam-blue;
+	                        color: $colour-vam-grey;
 	                        display: block;
 	                        text-decoration: none;
 	                        padding: calc-em(8px, $base-size);
+	                        
+	                        &:hover{
+		                        background-color: lighten($colour-vam-blue, 10);
+	                        }
 	                    }
 	                }
 	            }
