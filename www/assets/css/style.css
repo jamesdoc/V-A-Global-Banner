@@ -2305,14 +2305,21 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search {
   min-width: 1.375em;
   padding: 0.25em 0;
 }
-/* line 90, ../sass/style.scss */
+@media screen and (min-width: 600px) {
+  /* line 83, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation,
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search {
+    position: relative;
+  }
+}
+/* line 94, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation input[type=checkbox],
 body .vam_global_banner .vam_global_buttons .vam_global_site_search input[type=checkbox] {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-/* line 96, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation label,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search label {
   font-family: FontAwesome, TheSansBold, san-serif;
@@ -2322,27 +2329,30 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search label {
   margin-right: 0.25em;
   text-indent: -9999px;
 }
-/* line 105, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation label:hover,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search label:hover {
   color: #ddc983;
 }
-/* line 110, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation #vam_global_site_navigation_toggle:checked ~ ul,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search #vam_global_site_navigation_toggle:checked ~ ul {
   display: block;
 }
-/* line 114, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation #vam_global_site_search_toggle:checked ~ form,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search #vam_global_site_search_toggle:checked ~ form {
   display: table;
 }
-/* line 119, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form,
 body .vam_global_banner .vam_global_buttons .vam_global_navigation ul,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search ul {
   background-color: #614957;
+  border-bottom: 1px solid #44333d;
+  border-left: 1px solid #44333d;
+  border-right: 1px solid #44333d;
   display: none;
   font-family: TheSansBold, san-serif;
   left: 0;
@@ -2351,9 +2361,17 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search ul {
   max-width: 960px;
   position: absolute;
   right: 0;
-  width: 100%;
 }
-/* line 131, ../sass/style.scss */
+@media screen and (min-width: 600px) {
+  /* line 123, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation form,
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation ul,
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search form,
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search ul {
+    left: inherit;
+  }
+}
+/* line 141, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form li,
 body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form li,
@@ -2368,23 +2386,60 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li {
   width: 100%;
   white-space: nowrap;
 }
-@media screen and (min-width: 215px) {
-  /* line 131, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
+body .vam_global_banner .vam_global_buttons .vam_global_navigation form li:last-child,
+body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li:last-child,
+body .vam_global_banner .vam_global_buttons .vam_global_site_search form li:last-child,
+body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li:last-child {
+  border-bottom: 0;
+}
+@media screen and (min-width: 230px) {
+  /* line 141, ../sass/style.scss */
   body .vam_global_banner .vam_global_buttons .vam_global_navigation form li,
   body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li,
   body .vam_global_banner .vam_global_buttons .vam_global_site_search form li,
   body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li {
     width: 50%;
   }
-  /* line 143, ../sass/style.scss */
+  /* line 157, ../sass/style.scss */
   body .vam_global_banner .vam_global_buttons .vam_global_navigation form li:nth-child(2n+1),
   body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li:nth-child(2n+1),
   body .vam_global_banner .vam_global_buttons .vam_global_site_search form li:nth-child(2n+1),
   body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li:nth-child(2n+1) {
     border-right: 1px solid #fff;
   }
+  /* line 161, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation form li:nth-last-child(-n+2),
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li:nth-last-child(-n+2),
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search form li:nth-last-child(-n+2),
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li:nth-last-child(-n+2) {
+    border-bottom: 0;
+  }
 }
-/* line 148, ../sass/style.scss */
+@media screen and (min-width: 600px) {
+  /* line 141, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation form li,
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li,
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search form li,
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li {
+    width: 100%;
+  }
+  /* line 169, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation form li:nth-child(2n+1),
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li:nth-child(2n+1),
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search form li:nth-child(2n+1),
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li:nth-child(2n+1) {
+    border-right: 0;
+  }
+  /* line 173, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation form li:nth-last-child(2),
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li:nth-last-child(2),
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search form li:nth-last-child(2),
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li:nth-last-child(2) {
+    border-bottom: 1px solid #fff;
+  }
+}
+/* line 178, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form li a,
 body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li a,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form li a,
@@ -2396,28 +2451,40 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li a {
   text-decoration: none;
   padding: 0.5em;
 }
-/* line 156, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form li a:hover,
 body .vam_global_banner .vam_global_buttons .vam_global_navigation ul li a:hover,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form li a:hover,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search ul li a:hover {
   background-color: #ebf7fd;
 }
-/* line 163, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
+body .vam_global_banner .vam_global_buttons .vam_global_navigation ul,
+body .vam_global_banner .vam_global_buttons .vam_global_site_search ul {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  /* line 193, ../sass/style.scss */
+  body .vam_global_banner .vam_global_buttons .vam_global_navigation ul,
+  body .vam_global_banner .vam_global_buttons .vam_global_site_search ul {
+    width: 200px;
+  }
+}
+/* line 200, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form {
   height: 2em;
   overflow: hidden;
+  width: 100%;
 }
 @media screen and (min-width: 600px) {
-  /* line 163, ../sass/style.scss */
+  /* line 200, ../sass/style.scss */
   body .vam_global_banner .vam_global_buttons .vam_global_navigation form,
   body .vam_global_banner .vam_global_buttons .vam_global_site_search form {
-    left: inherit;
     width: 400px;
   }
 }
-/* line 172, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form input, body .vam_global_banner .vam_global_buttons .vam_global_navigation form button,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form input,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form button {
@@ -2425,7 +2492,7 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form button 
   margin: 0;
   padding: 0;
 }
-/* line 178, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form input[type=text],
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form input[type=text] {
   display: table-cell;
@@ -2437,12 +2504,12 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form input[t
   position: relative;
   width: 98%;
 }
-/* line 188, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form input[type=text]:focus,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form input[type=text]:focus {
   outline: none;
 }
-/* line 193, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form span,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form span {
   display: table-cell;
@@ -2452,7 +2519,7 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form span {
   width: 1%;
   white-space: nowrap;
 }
-/* line 201, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation form span button,
 body .vam_global_banner .vam_global_buttons .vam_global_site_search form span button {
   border: 1px solid transparent;
@@ -2467,31 +2534,25 @@ body .vam_global_banner .vam_global_buttons .vam_global_site_search form span bu
   vertical-align: middle;
   white-space: nowrap;
 }
-/* line 219, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation label i {
   font-style: normal;
 }
 @media screen and (max-width: 215px) {
-  /* line 224, ../sass/style.scss */
+  /* line 263, ../sass/style.scss */
   body .vam_global_banner .vam_global_buttons .vam_global_navigation label i {
     display: none;
   }
 }
-/* line 227, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_navigation label:before {
   content: '\f0c9';
 }
-@media screen and (min-width: 600px) {
-  /* line 232, ../sass/style.scss */
-  body .vam_global_banner .vam_global_buttons .vam_global_site_search {
-    position: relative;
-  }
-}
-/* line 235, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_site_search label i {
   display: none;
 }
-/* line 237, ../sass/style.scss */
+/* line 277, ../sass/style.scss */
 body .vam_global_banner .vam_global_buttons .vam_global_site_search label:before {
   content: '\f002';
 }

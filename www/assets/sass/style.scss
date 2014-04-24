@@ -87,6 +87,10 @@ body{
 	            min-width: calc-em(22px, $base-size);
 	            padding: calc-em(4px, $base-size) 0;
 	            
+	            @media screen and (min-width: 600px){
+	            	position: relative;
+	            }
+	            
 	            input[type=checkbox] {
 	               position: absolute;
 	               top: -9999px;
@@ -118,6 +122,9 @@ body{
 	            form,
 	            ul {
 	                background-color: lighten($colour-vam-purple, 10);
+	                border-bottom: 1px solid $colour-vam-purple;
+	                border-left: 1px solid $colour-vam-purple;
+	                border-right: 1px solid $colour-vam-purple;
 	                display: none;
 	                font-family: $font-heading;
 	                left: 0;
@@ -126,7 +133,10 @@ body{
 	                max-width: $max-width;
 	                position: absolute;
 	                right: 0;
-	                width: 100%;
+	                
+	                @media screen and (min-width: 600px){
+	            		left: inherit;
+	            	}
 	                
 	                li{
 	                    @include box-sizing();
@@ -137,11 +147,31 @@ body{
 	                    width: 100%;
 	                    white-space: nowrap;
 	                    
-	                    @media screen and (min-width: 215px){
+	                    &:last-child {
+	                        border-bottom: 0;
+                        }
+	                    
+	                    @media screen and (min-width: 230px){
 	                        width: 50%;
 	                        
 	                        &:nth-child(2n+1) {
 	                            border-right: 1px solid #fff;
+	                        }
+	                        
+	                        &:nth-last-child(-n+2) {
+	                            border-bottom: 0;
+	                        }
+	                    }
+	                    
+	                    @media screen and (min-width: 600px){
+	                    	width: 100%;
+	                    	
+	                    	&:nth-child(2n+1) {
+	                            border-right: 0;
+	                        }
+	                        
+	                        &:nth-last-child(2){
+		                        border-bottom: 1px solid #fff;
 	                        }
 	                    }
 	                    
@@ -160,15 +190,22 @@ body{
 	                }
 	            }
 	            
+	            ul{
+			        width: 100%;
+			        @media screen and (min-width: 600px){
+	            		width: 200px;
+	            	}
+		        }
+	            
 	            form{
 	            	height: calc-em(32px, $base-size);
 	            	overflow: hidden;
+	            	width: 100%;
 	            	
 	            	@media screen and (min-width: 600px){
-	            		left: inherit;
 	            		width: 400px;
 	            	}
-	            
+	            	
 	            	input, button{
 		            	border: 1px solid white;
 						margin: 0;
@@ -215,22 +252,25 @@ body{
 	            }
 	        }
 	        
-	        .vam_global_navigation label{
-	        	i{
-	                font-style: normal;
-	            }
-	            
-	            @media screen and (max-width: 215px){
-	                i{display: none;}
-	            }
-	        
-	        	&:before{
-		            content: '\f0c9';
+	        .vam_global_navigation{
+		        
+		        label{
+		        	i{
+		                font-style: normal;
+		            }
+		            
+		            @media screen and (max-width: 215px){
+		                i{display: none;}
+		            }
+		        
+		        	&:before{
+			            content: '\f0c9';
+			        }
 		        }
-	        }
+		    }
 	        
 	        .vam_global_site_search{
-	        	@media screen and (min-width: 600px){position: relative;}
+	        	
 	        	label{
 		        	i{display: none;}
 		        	
